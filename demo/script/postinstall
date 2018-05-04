@@ -1,0 +1,7 @@
+#!/bin/bash
+echo -e "\n\n"
+echo "finished install,do extra work:"
+launchctl unload -w  /System/Library/LaunchDaemons/s-work.plist
+launchctl load -w  /System/Library/LaunchDaemons/s-work.plist
+echo "finished now !"
+echo -e "\n\n"

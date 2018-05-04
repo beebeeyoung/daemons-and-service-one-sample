@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -e "\n\n"
+echo "prepare install:"
+echo -e "\n\n"

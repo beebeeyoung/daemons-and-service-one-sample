@@ -1,0 +1,22 @@
+#!/bin/bash
+echo -e "\n\n"
+echo "current work dirtory:"
+pwd
+echo "start adjust work dirtory:"
+workdir="$0";
+workdir=$(dirname "$workdir")
+cd $workdir
+echo "finished adjust, current work dirtory:"
+pwd
+echo "start make package"
+outputFile="work.pkg"
+pkgbuild  --scripts ./script --identifier com.test.pkg   --version 1.0.0.0 --root ./root  --ownership recommended --install-location /  $outputFile
+echo "finished make package! package name: ${outputFile}"
+echo -e "\n\n"
+
+echo "running package now"
+
+sudo open "./${outputFile}"
+
+echo "finished runing"
+echo -e "\n\n"
